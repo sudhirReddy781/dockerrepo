@@ -1,0 +1,4 @@
+# Get users
+
+curl --location --request GET 'http://localhost:9502/users'
+curl --location --request GET 'http://localhost:9502/users/63a3f79afc1da0f624a290eb'

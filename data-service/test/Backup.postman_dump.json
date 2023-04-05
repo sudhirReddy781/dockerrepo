@@ -1,0 +1,77 @@
+{
+	"version": 1,
+	"collections": [
+		{
+			"id": "db6a0fe3-b756-45a6-9371-cd3ef95a59e0",
+			"uid": "0-db6a0fe3-b756-45a6-9371-cd3ef95a59e0",
+			"name": "data-service",
+			"description": null,
+			"auth": null,
+			"events": null,
+			"variables": [],
+			"order": [
+				"1c2ea9e8-8ec7-42f9-9a12-56fd98807f9e",
+				"37e4939f-9540-440e-9812-1781a087cca0"
+			],
+			"folders_order": [],
+			"protocolProfileBehavior": {},
+			"createdAt": "2022-12-21T05:51:59.981Z",
+			"folders": [],
+			"requests": [
+				{
+					"id": "1c2ea9e8-8ec7-42f9-9a12-56fd98807f9e",
+					"uid": "0-1c2ea9e8-8ec7-42f9-9a12-56fd98807f9e",
+					"name": "GetAllUsers",
+					"url": "http://localhost:9502/users",
+					"description": null,
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "db6a0fe3-b756-45a6-9371-cd3ef95a59e0",
+					"pathVariables": {}
+				},
+				{
+					"id": "37e4939f-9540-440e-9812-1781a087cca0",
+					"uid": "0-37e4939f-9540-440e-9812-1781a087cca0",
+					"name": "GetUserById",
+					"url": "http://localhost:9502/users/63a3f79afc1da0f624a290eb",
+					"description": "",
+					"data": null,
+					"dataOptions": null,
+					"dataMode": null,
+					"headerData": null,
+					"method": "GET",
+					"pathVariableData": [],
+					"queryParams": [],
+					"auth": null,
+					"events": null,
+					"folder": null,
+					"responses_order": [],
+					"currentHelper": null,
+					"helperAttributes": null,
+					"collectionId": "db6a0fe3-b756-45a6-9371-cd3ef95a59e0",
+					"pathVariables": {}
+				}
+			]
+		}
+	],
+	"environments": [
+		{
+			"id": "585896cb-c03f-4a48-a4b6-119e310b9f3d",
+			"name": "My Workspace - globals",
+			"values": []
+		}
+	],
+	"headerPresets": [],
+	"globals": []
+}
