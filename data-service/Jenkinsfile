@@ -1,26 +1,24 @@
+
 pipeline {
+
     agent any
 
     tools {
         maven "Maven"
+        //docker "Docker"
         jdk "openjdk-14"
     }
 
     stages {
-        stage('Build') {
-            steps {
-                sh 'mvn clean compile package -f ./data-service/pom.xml'
-            }
+        stage('Maven Install') {
+          steps {
+            sh 'mvn clean install'
+          }
         }
-        stage('Test') {
-            steps {
-                sh 'mvn clean compile package -f ./data-service/pom.xml'
-            }
-            post {
-                always {
-                    archiveArtifacts '**/*.jar'
-                }
-            }
+        stage('SonarScan') {
+          steps {
+               sh 'mvn clean compile package org.sonarsource.scanner.maven:sonar-maven-plugin:RELEASE:sonar  -Dsonar.login=sqa_febc7e60f4cf2c53f821d96b8c9ff95e514beb03 -f ./data-service/pom.xml'
+          }
         }
     }
 }
